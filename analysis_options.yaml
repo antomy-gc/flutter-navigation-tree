@@ -1,0 +1,20 @@
+include: package:very_good_analysis/analysis_options.yaml
+
+analyzer:
+  plugins:
+    - custom_lint
+  errors:
+    require_trailing_commas: warning
+    unused_import: warning
+  language:
+    strict-casts: false
+    strict-inference: false
+
+linter:
+  rules:
+    public_member_api_docs: false
+    lines_longer_than_80_chars: false
+    document_ignores: false
+    avoid_catches_without_on_clauses: false
+    prefer_if_elements_to_conditional_expressions: false
+    avoid_bool_literals_in_conditional_expressions: false
