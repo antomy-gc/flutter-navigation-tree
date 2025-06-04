@@ -21,25 +21,25 @@ class Demo extends StatelessWidget {
           nodes: [
             TreeNode(
               content: const Text('Root'),
-              key: ValueKey('root'),
+              key: const ValueKey('root'),
               children: [
                 TreeNode(
-                  key: ValueKey('child-1'),
+                  key: const ValueKey('child-1'),
                   content: const Text('Child 1'),
                 ),
                 FutureTreeNode(
-                  key: ValueKey('child-2'),
+                  key: const ValueKey('child-2'),
                   content: const Text('Child 2'),
-                  childrenBuilder: () => Future.delayed(Duration(seconds: 1), () => [
+                  childrenBuilder: () => Future.delayed(const Duration(seconds: 1), () => [
                     TreeNode(
-                      key: ValueKey('grand-1'),
+                      key: const ValueKey('grand-1'),
                       content: const Text('Grandchild 1'),
                     ),
                     TreeNode(
-                      key: ValueKey('grand-2'),
+                      key: const ValueKey('grand-2'),
                       content: const Text('Grandchild 2'),
                     ),
-                  ]),
+                  ],),
                 ),
               ],
             ),
